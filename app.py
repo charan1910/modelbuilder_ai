@@ -60,11 +60,11 @@ if st.session_state.current_step == "done":
     st.write("Coding Agent Output:")
     st.code(st.session_state.get("coding_agent_output", "No output generated"))
 
-# Feedback Form
-st.write("### We'd love to hear your feedback!")
-feedback = st.text_area("Please share your feedback on the entire process:")
+    # Feedback Form
+    st.write("### We'd love to hear your feedback!")
+    feedback = st.text_area("Please share your feedback on the entire process:")
 
-if feedback:
-    # Log the feedback to the file
-    logging.info(f"User Feedback: {feedback}")    
-    st.write("Thank you for your feedback! We'll use it to improve the app.")
+    if feedback:
+        # Log the feedback to the file
+        logging.info(f"User Feedback: {feedback}")    
+        st.write("Thank you for your feedback! We'll use it to improve the app.")
