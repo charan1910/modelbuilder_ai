@@ -20,3 +20,19 @@ ModelBuilder AI is an agent-driven app designed to help anyone quickly get start
    ```bash
    git clone https://github.com/charan1910/modelbuilder_ai.git
    cd modelbuilder_ai
+
+---
+
+## Prerequisites
+
+1. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+
+---
+
+## Run the app
+
+1. **Run app**:
+   ```bash
+   streamlit run app.py
