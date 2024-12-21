@@ -1,0 +1,27 @@
+# Ignore Python bytecode
+*.pyc
+__pycache__/
+
+# Ignore environment files
+.env
+.venv/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore Uploaded docs
+uploads/*
+
+# Ignore config file
+config.py
+
+# Ignore notebooks
+.ipynb_checkpoints/
+Untitled.ipynb
+
+# Data folder
+data/
