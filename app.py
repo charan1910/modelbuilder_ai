@@ -13,7 +13,7 @@ logging.basicConfig(filename='feedback_log.txt', level=logging.INFO, format='%(a
 st.set_page_config(page_title="AI Chatbot for ML Models", layout="wide")
 
 # Title of the app
-st.title("AI Agent for Building Machine Learning Models")
+st.title("Modelbuilder AI : An AI Agent for Building ML Models")
 
 # Initialize session state for the steps
 if "current_step" not in st.session_state:
