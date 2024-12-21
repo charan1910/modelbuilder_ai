@@ -3,6 +3,11 @@ import pandas as pd
 from agents.data_agent import data_agent
 from agents.feature_engineering import feature_engineering_agent
 from agents.coding_agent import coding_agent
+import logging
+
+# Set up logging configuration
+logging.basicConfig(filename='feedback_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
+
 
 # Set the page configuration to use the wide layout
 st.set_page_config(page_title="AI Chatbot for ML Models", layout="wide")
@@ -55,5 +60,11 @@ if st.session_state.current_step == "done":
     st.write("Coding Agent Output:")
     st.code(st.session_state.get("coding_agent_output", "No output generated"))
 
-# # Debugging: Show session state for troubleshooting
-# st.write("Session State:", st.session_state)
+# Feedback Form
+st.write("### We'd love to hear your feedback!")
+feedback = st.text_area("Please share your feedback on the entire process:")
+
+if feedback:
+    # Log the feedback to the file
+    logging.info(f"User Feedback: {feedback}")    
+    st.write("Thank you for your feedback! We'll use it to improve the app.")
